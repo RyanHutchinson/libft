@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:45:29 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 08:31:02 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/21 11:22:22 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/21 11:35:30 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
-{
-	int i;
-	int j;
+int		ft_strlen(const char *str);
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+char	*ft_strchr(const char *str, int c)
+{
+	char	*ptr;
+	int		i;
+
+	i = ft_strlen(str) + 1;
+	if (str[i] == (char)c)
 	{
-		i++;
+		ptr = (char *)&str[i];
+		return (ptr);
 	}
-	while (src[j] != '\0')
+	while (i >= 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		if (str[i] == (char)c)
+		{
+			ptr = (char *)&str[i];
+			return (ptr);
+		}
+		i--;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (NULL);
 }

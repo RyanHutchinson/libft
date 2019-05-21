@@ -6,24 +6,24 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:53:09 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/20 09:55:19 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:28:55 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putnbr(int nbr)
 {
 	if (nbr < 0)
-		{
-			ft_putchar('-');
-			ft_putnbr(-nbr);
-		}
+	{
+		ft_putchar('-');
+		ft_putnbr(-nbr);
+	}
 	else if (nbr > 9)
-		{
-			ft_putnbr(nbr / 10);
-			ft_putnbr(nbr % 10);
-		}
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
 	else
-		{
-			ft_putchar(nbr + '0');
-		}
+	{
+		ft_putchar(nbr + '0');
+	}
 }

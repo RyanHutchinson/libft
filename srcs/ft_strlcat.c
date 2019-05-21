@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:45:29 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 08:31:02 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/21 08:39:53 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/21 10:04:10 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+int		ft_strlen(char *str);
+
+char	*ft_strlcat(char *dest, const char *src, size_t n)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	j = ft_strlen(dest);
+	while (src[i] != '\0' && i < (n - (j + 1)))
 	{
+		dest[i + j] = src[i];
 		i++;
 	}
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
