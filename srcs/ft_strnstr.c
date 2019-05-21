@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:07:13 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 13:12:06 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/21 12:19:43 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/21 12:34:37 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *str1, const char *str2)
+char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 {
-	size_t i;
+	size_t	i;
+	size_t	j;
+	char	*ptr;
 
 	i = 0;
-	while (str1[i] != '\0' && str2[i] != '\0')
+	while (str1[i] != '\0' && i < n)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		j = 0;
+		while (str1[i] == str2[j])
+		{
+			if (str2[j + 1] == '\0' && i < n)
+			{
+				ptr = (char*)&str1[i - j];
+				return (ptr);
+			}
+			i++;
+			j++;
+		}
 		i++;
 	}
-	if ((str1[i] == '\0' && str2[i] != '\0') || (str2[i] == '\0' &&
-				str1[i] != '\0'))
-		return (str1[i] - str2[i]);
-	return (0);
+	return (NULL);
 }

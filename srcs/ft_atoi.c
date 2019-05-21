@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:10:41 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/20 10:11:28 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/21 13:37:42 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/21 13:42:52 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str) 
-{ 
-    int res;
- 	int sign;  
-    int i;
+int	ft_atoi(char *str)
+{
+	int res;
+	int sign;
+	int i;
 
 	res = 0;
 	sign = 1;
 	i = 0;
-
 	while (str[i] == ' ')
 		i++;
 	if (str[i] == '-')
@@ -33,5 +32,5 @@ int ft_atoi(char *str)
 		i++;
 	}
 	res = res * sign;
-    return (res); 
-} 
+	return (res);
+}
