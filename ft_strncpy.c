@@ -6,9 +6,11 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:03:54 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 08:35:10 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:33:01 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
@@ -20,6 +22,10 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }

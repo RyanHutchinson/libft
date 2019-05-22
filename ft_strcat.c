@@ -6,9 +6,11 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:45:29 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 08:31:02 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:29:32 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

@@ -6,9 +6,11 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:42:46 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 12:12:17 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:34:22 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(const char *str1, const char *str2)
 {

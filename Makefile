@@ -6,14 +6,14 @@
 #    By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 08:44:40 by rhutchin          #+#    #+#              #
-#    Updated: 2019/05/21 16:01:50 by rhutchin         ###   ########.fr        #
+#    Updated: 2019/05/22 13:21:55 by rhutchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = "libft.a"
 
-SRC = ft_atoi.c
-OBJ = ft_atoi.o
+SRC = *.c
+OBJ = *.o
 
 INCL = libft.h
 

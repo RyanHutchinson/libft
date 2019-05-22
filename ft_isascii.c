@@ -6,13 +6,15 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:19:58 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 14:24:06 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 15:49:11 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 119)
+	if (c >= 0 && c <= 127)
 	{
 		return (1);
 	}

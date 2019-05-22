@@ -6,13 +6,13 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:22:22 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 11:35:30 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:24:40 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *str);
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	char	*ptr;
 	int		i;

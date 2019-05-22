@@ -6,15 +6,14 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:01:16 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 16:05:58 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 14:07:16 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t n);
-
 void	*ft_bzero(void *str, size_t n)
 {
 	ft_memset(str, 0, n);
+	return (str);
 }

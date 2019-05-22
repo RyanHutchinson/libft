@@ -6,20 +6,13 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:12:03 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/21 08:34:40 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:30:22 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcpy(char *dest, const char *src)
 {
-	int i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (ft_memcpy(dest, src, ft_strlen(src) + 1));
 }
