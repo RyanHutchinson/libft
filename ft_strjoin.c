@@ -6,7 +6,7 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 15:01:08 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/23 15:15:46 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/27 12:45:05 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ char	*ft_strjoin(const char *str1, const char *str2)
 	ft_strcat(new, str1);
 	ft_strcat(new, str2);
 	return (new);
-
 }

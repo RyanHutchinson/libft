@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 13:31:29 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/27 12:42:43 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/27 12:51:28 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/27 13:42:20 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
-	int		i;
-	char	*dest;
+	t_list	*new;
 
-	i = 0;
-	if (!(dest = (char *)malloc(ft_strlen(str) + 1)))
+	if (!(new = malloc(content_size)))
 		return (NULL);
-	while (str[i] != '\0')
-	{
-		dest[i] = str[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	new->content = (void *)content;
+	if (content == NULL)
+		new->content_size = 0;
+	else
+		new->content_size = content_size;
+	new->next = NULL;
+	return (new);
 }

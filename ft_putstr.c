@@ -6,7 +6,7 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:47:00 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/23 09:43:41 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/27 12:46:34 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ void	ft_putstr(char *str)
 
 	i = 0;
 	if (str != NULL)
-	while (str[i] != '\0')
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i] != '\0')
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 	}
 }

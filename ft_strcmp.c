@@ -6,13 +6,13 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:07:13 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/23 09:33:54 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/27 12:41:21 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_strcmp(const char *str1, const char *str2)
-{	
+{
 	return (ft_strncmp(str1, str2, ft_strlen(str1) + 1));
 }
