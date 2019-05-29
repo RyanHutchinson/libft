@@ -6,34 +6,26 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:34:51 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/29 09:24:55 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/29 10:20:52 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_lstaddback(t_list **lst, t_list *new)
-{
-	t_list *tmp;
-
-	tmp = *lst;
-	if (tmp == NULL)
-		ft_lstadd(lst, new);
-	else
-	{
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = new;
-	}
-}
-
 t_list		*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 {
 	t_list *new;
+	t_list *scanner;
 
-	while (lst != NULL && f != NULL)
+	if (lst == NULL || f == NULL)
+		return (NULL);
+	scanner = f(lst);
+	new = scanner;
+	while (lst->next != NULL)
 	{
-		ft_lstaddback(&new, f(lst));
+
+		scanner->next = f(lst->next);
+		scanner = scanner->next;
 		lst = lst->next;
 	}
 	return (new);
