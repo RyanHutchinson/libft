@@ -6,7 +6,7 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:44:42 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/23 13:50:57 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/29 09:03:04 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striter(char *str, void (*f)(char *))
 	int i;
 
 	i = 0;
-	if (str != NULL)
+	if (str != NULL && f != NULL)
 	{
 		while (str[i] != '\0')
 		{

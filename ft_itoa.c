@@ -6,13 +6,13 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:11:09 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/27 12:22:10 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:08:46 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen(long int num)
+static int	ft_intlen(long int num)
 {
 	unsigned int	i;
 
@@ -31,7 +31,7 @@ int		ft_intlen(long int num)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	unsigned int	i;
 	char			*new;

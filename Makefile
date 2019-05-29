@@ -6,11 +6,11 @@
 #    By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 08:44:40 by rhutchin          #+#    #+#              #
-#    Updated: 2019/05/28 08:16:28 by rhutchin         ###   ########.fr        #
+#    Updated: 2019/05/28 16:00:32 by rhutchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = "libft.a"
+NAME = libft.a
 
 SRC = ft_lstdel.c ft_putchar.c ft_strdel.c ft_strnequ.c ft_lstdelone.c \
 	  ft_putchar_fd.c ft_strdup.c ft_strnew.c ft_lstiter.c ft_putendl.c \

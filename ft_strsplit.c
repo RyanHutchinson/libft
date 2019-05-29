@@ -6,14 +6,14 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 08:33:50 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/27 12:10:40 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:08:06 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		ft_wordcount(const char *str, char c)
+static int	ft_wordcount(const char *str, char c)
 {
 	size_t	i;
 	size_t	k;
@@ -32,7 +32,7 @@ int		ft_wordcount(const char *str, char c)
 	return (k);
 }
 
-char	**ft_wordadd(const char *str, char c, char **new)
+static char	**ft_wordadd(const char *str, char c, char **new)
 {
 	size_t	i;
 	size_t	j;
@@ -55,7 +55,7 @@ char	**ft_wordadd(const char *str, char c, char **new)
 	return (new);
 }
 
-char	**ft_strsplit(const char *str, char c)
+char		**ft_strsplit(const char *str, char c)
 {
 	char	**new;
 

@@ -6,7 +6,7 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:31 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/27 15:48:14 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/29 08:52:57 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void				ft_striter(char *str, void (*f)(char *));
 void				ft_striteri(char *str, void (*f)(unsigned int, char *));
 char				*ft_strjoin(const char *str1, const char *str2);
 size_t				ft_strlcat(char *dest, const char *src, size_t n);
-int					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 char				*ft_strmap(const char *str, char (*f)(char));
 char				*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 char				*ft_strncat(char *dest, const char *src, size_t n);
