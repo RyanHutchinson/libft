@@ -6,7 +6,7 @@
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:31 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/29 08:52:57 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/29 11:06:54 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void				ft_putnbr_fd(int nbr, int fd);
 void				ft_putstr(char *str);
 void				ft_putstr_fd(const char *str, int fd);
 
+char				*ft_replacechr(char **str, char f, char r);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *str, int c);
 void				ft_strclr(char *str);
@@ -62,6 +63,7 @@ int					ft_strcmp(const char *str1, const char *str2);
 char				*ft_strcpy(char *dest, const char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *str);
+char				*ft_strdupdel(char **str);
 int					ft_strequ(const char *str1, const char *str2);
 int					ft_strnequ(const char *str1, const char *str2, size_t n);
 void				ft_striter(char *str, void (*f)(char *));

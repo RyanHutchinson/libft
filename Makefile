@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/05/20 08:44:40 by rhutchin          #+#    #+#              #
-#    Updated: 2019/05/28 16:00:32 by rhutchin         ###   ########.fr        #
+#    Created: 2019/05/29 11:19:49 by rhutchin          #+#    #+#              #
+#    Updated: 2019/05/29 11:20:28 by rhutchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = ft_lstdel.c ft_putchar.c ft_strdel.c ft_strnequ.c ft_lstdelone.c \
 	  ft_strmap.c ft_swap.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strmapi.c \
 	  ft_tolower.c ft_iswhitespace.c ft_memdel.c ft_strclr.c ft_strncat.c \
 	  ft_toupper.c ft_itoa.c ft_memmove.c ft_strcmp.c ft_strncmp.c ft_lstadd.c \
-	  ft_memset.c ft_strcpy.c ft_strncpy.c
+	  ft_memset.c ft_strcpy.c ft_strncpy.c ft_replacechr.c ft_strdupdel.c
 
 OBJ = ft_lstdel.o ft_putchar.o ft_strdel.o ft_strnequ.o ft_lstdelone.o \
 	  ft_putchar_fd.o ft_strdup.o ft_strnew.o ft_lstiter.o ft_putendl.o \
@@ -36,7 +36,7 @@ OBJ = ft_lstdel.o ft_putchar.o ft_strdel.o ft_strnequ.o ft_lstdelone.o \
 	  ft_strmap.o ft_swap.o ft_isprint.o ft_memcpy.o ft_strchr.o ft_strmapi.o \
 	  ft_tolower.o ft_iswhitespace.o ft_memdel.o ft_strclr.o ft_strncat.o \
 	  ft_toupper.o ft_itoa.o ft_memmove.o ft_strcmp.o ft_strncmp.o ft_lstadd.o \
-	  ft_memset.o ft_strcpy.o ft_strncpy.o
+	  ft_memset.o ft_strcpy.o ft_strncpy.o ft_replacechr.o ft_strdupdel.o
 
 INCL = libft.h
 

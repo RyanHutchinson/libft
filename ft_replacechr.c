@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_replacechr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:34:51 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/05/29 11:07:10 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/05/28 13:31:31 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/05/29 11:07:54 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
+char	*ft_replacechr(char **str, char f, char r)
 {
-	t_list *new;
-	t_list *scanner;
+	char	*ptr;
 
-	if (lst == NULL || f == NULL)
+	if ((ptr = ft_strchr(*str, f)) == NULL)
 		return (NULL);
-	scanner = f(lst);
-	new = scanner;
-	while (lst->next != NULL)
-	{
-		scanner->next = f(lst->next);
-		scanner = scanner->next;
-		lst = lst->next;
-	}
-	return (new);
+	ptr = &r;
+	return (ptr);
 }
