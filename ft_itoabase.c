@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_itoabase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:41:46 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/06/13 09:23:54 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/06/13 09:10:59 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/06/18 14:12:11 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t n)
+char	*ft_itoa_base(int n, int base)
 {
-	int		*new;
+	int		temp;
+	char	*str;
+	int		size;
 
-	if (!(new = malloc(n)))
-		return (NULL);
-	ft_bzero(new, n);
-	return (new);
+	temp = n;
+	size = 0;
+	while (temp > 0)
+	{
+		temp = temp / base;
+		size++;
+	}
+	str = ft_strnew(size + 1);
+	size--;
+	while (size >= 0)
+	{
+		temp = n % base;
+		n = n / base;
+		if (temp < 10)
+			str[size] = temp + '0';
+		else
+			str[size] = (temp - 10) + 'a';
+		size--;
+	}
+	return (str);
 }
