@@ -6,17 +6,11 @@
 #    By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 11:19:49 by rhutchin          #+#    #+#              #
-#    Updated: 2019/06/24 08:59:06 by rhutchin         ###   ########.fr        #
+#    Updated: 2019/06/18 14:10:35 by rhutchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-INCL = libft.h
-
-C = gcc
-
-CFLAGS = -Wall -Werror -Wextra
 
 SRC = ft_lstdel.c ft_putchar.c ft_strdel.c ft_strnequ.c ft_lstdelone.c \
 	  ft_putchar_fd.c ft_strdup.c ft_strnew.c ft_lstiter.c ft_putendl.c \
@@ -30,23 +24,33 @@ SRC = ft_lstdel.c ft_putchar.c ft_strdel.c ft_strnequ.c ft_lstdelone.c \
 	  ft_tolower.c ft_iswhitespace.c ft_memdel.c ft_strclr.c ft_strncat.c \
 	  ft_toupper.c ft_itoa.c ft_memmove.c ft_strcmp.c ft_strncmp.c ft_lstadd.c \
 	  ft_memset.c ft_strcpy.c ft_strncpy.c ft_replacechr.c ft_strdupdel.c \
-	  ft_itoa_base.c
+	  ft_itoabase.c
 
+OBJ = ft_lstdel.o ft_putchar.o ft_strdel.o ft_strnequ.o ft_lstdelone.o \
+	  ft_putchar_fd.o ft_strdup.o ft_strnew.o ft_lstiter.o ft_putendl.o \
+	  ft_strequ.o ft_strnstr.o ft_atoi.o ft_lstmap.o ft_putendl_fd.o \
+	  ft_striter.o ft_strrchr.o ft_bzero.o ft_lstnew.o ft_putnbr.o \
+	  ft_striteri.o ft_strsplit.o ft_isalnum.o ft_memalloc.o ft_putnbr_fd.o	\
+	  ft_strjoin.o ft_strstr.o ft_isalpha.o ft_memccpy.o ft_putstr.o \
+	  ft_strlcat.o ft_strsub.o ft_isascii.o ft_memchr.o ft_putstr_fd.o \
+	  ft_strlen.o ft_strtrim.o ft_isdigit.o ft_memcmp.o ft_strcat.o \
+	  ft_strmap.o ft_swap.o ft_isprint.o ft_memcpy.o ft_strchr.o ft_strmapi.o \
+	  ft_tolower.o ft_iswhitespace.o ft_memdel.o ft_strclr.o ft_strncat.o \
+	  ft_toupper.o ft_itoa.o ft_memmove.o ft_strcmp.o ft_strncmp.o ft_lstadd.o \
+	  ft_memset.o ft_strcpy.o ft_strncpy.o ft_replacechr.o ft_strdupdel.o \
+	  ft_itoabase.o
 
-OBJECTS =$(SRC:.c=.o)
-
-%.o:		%.c $(INCL)
-	@echo "\033[1;35;m[Compiling $<] \t\033[0m"
-	@$(C) $(CFLAGS) -c -o $@ $<
+INCL = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	@ar rcs $(NAME) $(OBJECTS) $(INCL)
+$(NAME):
+	gcc -c -Wall -Werror -Wextra $(SRC)
+	ar rv $(NAME) $(OBJ) $(INCL)
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

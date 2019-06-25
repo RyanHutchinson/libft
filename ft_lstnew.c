@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rhutchin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:51:28 by rhutchin          #+#    #+#             */
-/*   Updated: 2019/06/24 09:36:06 by rhutchin         ###   ########.fr       */
+/*   Updated: 2019/05/29 09:13:46 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(const void *content, size_t content_size)
 {
 	t_list *new;
 
-	if (!(new = ft_memalloc(sizeof(t_list))))
+	if (!(new = malloc(sizeof(t_list))))
 		return (NULL);
 	if (content == NULL)
 	{
@@ -25,9 +25,8 @@ t_list	*ft_lstnew(const void *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new->content = ft_memalloc(content_size)))
+		if (!(new->content = ft_strdup(content)))
 			return (NULL);
-		ft_memmove(new->content, content, content_size);
 		new->content_size = content_size;
 	}
 	new->next = NULL;

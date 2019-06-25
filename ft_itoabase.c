@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_itoabase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhutchin <rhutchin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 09:43:48 by mbotes            #+#    #+#             */
-/*   Updated: 2019/06/25 07:50:07 by rhutchin         ###   ########.fr       */
+/*   Created: 2019/06/13 09:10:59 by rhutchin          #+#    #+#             */
+/*   Updated: 2019/06/18 14:12:11 by rhutchin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_itoa_base(int n, int base)
 {
-	size_t	i;
+	int		temp;
+	char	*str;
+	int		size;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	temp = n;
+	size = 0;
+	while (temp > 0)
+	{
+		temp = temp / base;
+		size++;
+	}
+	str = ft_strnew(size + 1);
+	size--;
+	while (size >= 0)
+	{
+		temp = n % base;
+		n = n / base;
+		if (temp < 10)
+			str[size] = temp + '0';
+		else
+			str[size] = (temp - 10) + 'a';
+		size--;
+	}
+	return (str);
 }
