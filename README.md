@@ -14,7 +14,7 @@ To get started, clone this repo and go into the folder:
 
 ```
 git clone https://github.com/Ryanhutchinson/libft.git
-cd ./libft/libft/
+cd ./libft/SRC
 ```
 
 ### Making:
