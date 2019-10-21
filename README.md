@@ -1,19 +1,16 @@
 # Libft - C - 2019
 
-Libft is a library we created in C to help us during the WeThinkCode journey.
+Libft is a recreation of C's standard Libraries. What better way to learn that to re-create!
 
 ## WeThinkCode:
 
 **Part 1:** 28/28  
 **Part 2:** 24/24  
 **Bonus:**  6/6  
-**Five Extra:** 5/5  
-  
-**Total:** 125/125
 
 ## Installation:
 
-To get started, clone the Libft repo and go into the folder:
+To get started, clone this repo and go into the folder:
 
 ```
 git clone https://github.com/FWMoor/libft
@@ -30,8 +27,8 @@ make
 
 ## Using the library:
 
-To use the library, you need to add "#include "libft.h"" in your name and change the directory of your libft.h.
-If you add a function to the library, you'll need to add the function in the libft.h file and the Makefile.
+To use the library, you need to "#include "libft.h"" in your code. If you add a function to the library,
+you'll need to add the function in the libft.h file and the Makefile.
 
 ### Compiling with libft.a
 
@@ -44,13 +41,10 @@ gcc [Your Main] [Other Files] libft.a
 
 ## Disclaimer:
 
-The functions I've altered have been altered by changing my code partly. This libft won't be changed regularly as this is only 
-for my github. I have another private repo in which I will add my new functions through the year.
+This libft won't be changed regularly and is mainly for displaying my experience through the course.
 
 ## Don't be a GitHub hero!
 
-Come and talk to me before using my code. Some of the functions have been altered from the one I pushed.
-Before you use it and mess up, come talk to me.
-I can explain to you what is does and how to do it yourself.
-You won't learn anything by just taking code.
+If you are a new _WeThinkCoder please do not copy and paste this work but feel free to use this as reference... be smart and not lazy!
+You won't learn anything by copy-pasting code.
 Thanks!
