@@ -13,7 +13,7 @@ Libft is a recreation of C's standard Libraries. What better way to learn that t
 To get started, clone this repo and go into the folder:
 
 ```
-git clone https://github.com/FWMoor/libft
+git clone https://github.com/Ryanhutchinson/libft.git
 cd ./libft/libft/
 ```
 
